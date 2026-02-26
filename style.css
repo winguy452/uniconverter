@@ -1,7 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background: #0d0d0d;
+  background: #0b0b0b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,72 +9,70 @@ body {
   color: white;
 }
 
-/* Main box */
 .container {
-  background: rgba(30, 30, 30, 0.8);
+  background: #151515;
   padding: 35px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-  backdrop-filter: blur(8px);
-  width: 320px;
+  width: 500px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 
-/* Title */
 h1 {
   margin-top: 0;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 42px;
+  font-weight: 700;
 }
 
-/* File input */
-input[type="file"] {
-  margin: 15px 0;
-  width: 100%;
-  color: white;
+.upload-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Dropdown */
-select {
-  width: 100%;
-  padding: 10px;
+
+.custom-file {
+  background: #222;
+  padding: 10px 16px;
   border-radius: 12px;
-  border: none;
-  background: #2b2b2b;
-  color: white;
-  margin-bottom: 15px;
-  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid #333;
 }
 
+.custom-file:hover {
+  background: #2d2d2d;
+}
 
-button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #4f8cff, #6f4fff);
+/* hide ugly default input */
+.custom-file input {
+  display: none;
+}
+
+/* modern dropdown */
+select {
+  background: #222;
   color: white;
-  font-size: 15px;
-  font-weight: 600;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* modern glowing button */
+button {
+  background: linear-gradient(135deg,#4f8cff,#6f4fff);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.25s ease;
   box-shadow: 0 6px 18px rgba(79,140,255,0.4);
 }
 
-/* Hover effect */
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(79,140,255,0.6);
-}
-
-/* Click effect */
-button:active {
-  transform: scale(0.98);
-}
-
-/* Status text */
-#status {
-  margin-top: 12px;
-  font-size: 14px;
-  opacity: 0.8;
 }
